@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Software Developer & QA Automation Convierto :coffee: en codigo.">
+
+  <title>Deyvid Ferrer</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="//"><h5><b>Deyvid Ferrer</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link active" href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/conoceme/">Conóceme</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>Git de Novato a experto</b></h1>
+
+<p class="post-metadata text-muted">
+  25 July 2020 -  
+  <b>3 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#git">
+      <span class="tag badge badge-pill text-primary border border-primary">Git</span>
+    </a>
+    </p>
+
+<figure class="figure w-100">
+  <img src="https://cdn-images-1.medium.com/max/1000/0*MAeS-4fEc0Y7T4VB.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<h2 id="qué-es-y-por-qué-utilizar-un-manejador-de-versiones">¿Qué es y por qué utilizar un manejador de versiones</h2>
+<hr>
+
+<p>Seguramente, te has encontrado en la situación de tener 10 veces duplicada la carpeta del proyecto en el que estás trabajando y cada una de ellas llamada.
+version-final, version-final1, version-final2 y así sucesivamente.</p>
+
+<p>Sin usar un versionador o manejador de versiones, es normal que tengamos un proyecto en un cliente, por ejemplo una página web, que ya está funcionando, pero que el cliente quiere seguir desarrollando nuevas funcionalidades, módulos etc. Que mientras nosotros trabajamos en esos cambios, supongamos que la página que está al aire, está fallando o el cliente quiere hacer un cambio urgente.</p>
+
+<p>Cómo en la carpeta donde estamos trabajando hay cambios que están en progreso y no están terminados, no podemos hacer la corrección ahí, por lo que vamos a tener que duplicar el proyecto base, hacer los cambios y subirlos y luego retomar nuestro desarrollo en la otra carpeta 2.0. pero si queremos ahora actualizar los cambios hechos en el proyecto base, tendremos que copiar los archivos modificarlos y pegarlos en el proyecto 2.0</p>
+
+<p>Pero qué pasa si, nosotros habíamos hecho cambios en nuestra versión 2.0 de ese mismo archivo?</p>
+
+<p>No podríamos solo sobreescribir el archivo porque los perderíamos.
+Por lo que tendríamos que ir a la carpeta original, abrir el archivo y copiar el fragmento de código que queremos agregar para actualizar nuestro proyecto 2.0</p>
+
+<p>Imagina tener que recordar todos los cambios que has ido haciendo y súmale a esto tener que trabajar con otras personas en el mismo proyecto y que cada uno esté desarrollando una funcionalidad específica.</p>
+
+<p>Se volvería muy difícil y costoso el seguimiento y mantenimiento.</p>
+
+<p>Por eso surgen los repositorios y manejadores de versiones.</p>
+
+<p>Para centralizar el código y segmentar el desarrollo para su posterior combinación/fusión y control de cambios.</p>
+
+<p>A esto se le puede añadir el control de roles y permisos para la gestión y manejo del código base.</p>
+
+<p>Pero mantengamos esto, simple y empecemos por partes, vamos allá!</p>
+
+<hr>
+
+<h2 id="instalación">Instalación:</h2>
+
+<p>Lo primero es instalar un manejador de versiones, para este tutorial, estaremos usando Git, que es el más famoso del mercado, pero existen diferentes en el mercado cómo:</p>
+<ul>
+  <li>git</li>
+  <li>mercurial</li>
+  <li>Svn</li>
+</ul>
+
+<h4 id="les-dejo-el-link-para-su-descarga">Les dejo el link para su descarga:</h4>
+
+<ul>
+  <li>
+    <p>Windows
+<a href="https://git-scm.com/downloads">Descargar</a></p>
+  </li>
+  <li>
+    <p>Mac
+<a href="https://sourceforge.net/projects/git-osx-installer/files/">Descargar</a></p>
+  </li>
+</ul>
+
+<p>desde la terminal ejecutando</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>brew <span class="nb">install </span>git
+</code></pre></div></div>
+
+<h4 id="linux-desde-la-terminal">Linux: Desde la terminal</h4>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>git
+</code></pre></div></div>
+
+<p>En el caso de Linux, este sería el comando para instalarlo desde la terminal, aunque ya viene instalado por defecto en muchas distribuciones como Ubuntu. También está disponible desde la tienda de software de Ubuntu.</p>
+
+<hr>
+
+<h2 id="iniciar-el-manejador-en-el-proyecto">Iniciar el manejador en el proyecto</h2>
+
+<p>Git es una herramienta hecha principalmente para usar vía terminal/consola/cmd. Pero con el pasar de los años se desarrollaron muchas aplicaciones e interfaces para facilitar la interacción en el día a día.</p>
+
+<p>Al día de hoy se encuentra integrado a la mayoría de editores de código, con una interfaz gráfica sencilla e intuitiva.</p>
+
+<p><strong>Pero en este tutorial aprenderemos las bases con comandos.</strong></p>
+
+<p>Lo primero es activar o iniciar el git en nuestro proyecto, para eso vamos a la ruta donde se encuentra nuestro proyecto y en la carpeta base ejecutamos el comando.</p>
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git init
+</code></pre></div></div>
+
+<p>Listo, con esto Git creará una carpeta .Git
+Oculta y empezará a hacer magia.</p>
+
+<p>El siguiente comando será:</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git status
+</code></pre></div></div>
+
+<p>Con esto nos mostrará todos los archivos y carpetas de nuestro proyecto que Git detectó para empezar a hacer tracking o seguimiento.</p>
+
+<p>Por el momento síganme y ejecuten los siguientes comandos.</p>
+
+<p>Más adelante les explicaré que hace cada uno.</p>
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git add <span class="nb">.</span>
+<span class="gp">$</span><span class="w"> </span>git commit <span class="nt">-m</span> <span class="s2">"proyecto base"</span>
+</code></pre></div></div>
+
+<p><strong>Listo! hicimos nuestro primer commit, Wujuuu!! ¡Esto tenemos que celebrarlo!</strong></p>
+
+<h4 id="continuara">Continuara…</h4>
+
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> con <i class="fas fa-heart"></i>
+    por <strong>Deyvid Ferrer</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="mailto:deyvidferrer02@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.instagram.com/deyvidferrer" style="color: #6c757d" onmouseover="this.style.color='#405de6'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/deyvid-ferrer-9607a245" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.youtube.com/deyvidferrer" style="color: #6c757d" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-1x"></i>
+    </a>
+
+</div>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>
