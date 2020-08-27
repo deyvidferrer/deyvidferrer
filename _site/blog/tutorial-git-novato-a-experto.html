@@ -61,7 +61,7 @@
 
 <p class="post-metadata text-muted">
   25 July 2020 -  
-  <b>3 mins read time</b>
+  <b>6 mins read time</b>
 
   <br>Tags: 
     
@@ -70,8 +70,9 @@
     </a>
     </p>
 
-<figure class="figure w-100">
-  <img src="https://cdn-images-1.medium.com/max/1000/0*MAeS-4fEc0Y7T4VB.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/z6NgqU8jEVI" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 <h2 id="qué-es-y-por-qué-utilizar-un-manejador-de-versiones">¿Qué es y por qué utilizar un manejador de versiones</h2>
 <hr>
@@ -79,22 +80,23 @@
 <p>Seguramente, te has encontrado en la situación de tener 10 veces duplicada la carpeta del proyecto en el que estás trabajando y cada una de ellas llamada.
 version-final, version-final1, version-final2 y así sucesivamente.</p>
 
-<p>Sin usar un versionador o manejador de versiones, es normal que tengamos un proyecto en un cliente, por ejemplo una página web, que ya está funcionando, pero que el cliente quiere seguir desarrollando nuevas funcionalidades, módulos etc. Que mientras nosotros trabajamos en esos cambios, supongamos que la página que está al aire, está fallando o el cliente quiere hacer un cambio urgente.</p>
+<p>Sin usar un versionador o manejador de versiones, es normal que tengamos un proyecto desordenado y con pocas opciones para gestionarlo y mucho menos trabajar en equipo de manera simultanea. Usemos como ejemplo una página web, que ya está publicada, pero que el cliente quiere seguir haciendo cambios, desarrollando nuevas funcionalidades, módulos etc. Entonces, mientras nosotros trabajamos en esos cambios, supongamos que la página empieza a fallar o el cliente quiere hacer un cambio urgente.</p>
 
-<p>Cómo en la carpeta donde estamos trabajando hay cambios que están en progreso y no están terminados, no podemos hacer la corrección ahí, por lo que vamos a tener que duplicar el proyecto base, hacer los cambios y subirlos y luego retomar nuestro desarrollo en la otra carpeta 2.0. pero si queremos ahora actualizar los cambios hechos en el proyecto base, tendremos que copiar los archivos modificarlos y pegarlos en el proyecto 2.0</p>
+<p>Sin un manejador de versiones estariamos trabajando mas o menos de la siguiente manera:
+Cómo en la carpeta donde estamos trabajando hay cambios que están en progreso y no están terminados, no podemos hacer la corrección ahí, por lo que vamos a tener que duplicar el proyecto base, hacer los cambios y subirlos y luego retomar nuestro desarrollo en la otra carpeta 2.0. pero si queremos ahora actualizar los cambios hechos en el proyecto base, tendremos que copiar los archivos modificarlos y pegarlos en el proyecto 2.0</p>
 
 <p>Pero qué pasa si, nosotros habíamos hecho cambios en nuestra versión 2.0 de ese mismo archivo?</p>
 
 <p>No podríamos solo sobreescribir el archivo porque los perderíamos.
 Por lo que tendríamos que ir a la carpeta original, abrir el archivo y copiar el fragmento de código que queremos agregar para actualizar nuestro proyecto 2.0</p>
 
-<p>Imagina tener que recordar todos los cambios que has ido haciendo y súmale a esto tener que trabajar con otras personas en el mismo proyecto y que cada uno esté desarrollando una funcionalidad específica.</p>
+<p>Imagina tener que recordar todos los cambios que has ido haciendo y sumandole a esto, tener que trabajar con otras personas en el mismo proyecto y que cada uno esté desarrollando una funcionalidad específica.</p>
 
 <p>Se volvería muy difícil y costoso el seguimiento y mantenimiento.</p>
 
 <p>Por eso surgen los repositorios y manejadores de versiones.</p>
 
-<p>Para centralizar el código y segmentar el desarrollo para su posterior combinación/fusión y control de cambios.</p>
+<p>Para gestionar nuestro proyecto y segmentar el desarrollo para su posterior combinación/fusión y control de cambios, ademas de la posibilidad de trabajar en equipo y poder revertir cambios en caso de que algo salga mal.</p>
 
 <p>A esto se le puede añadir el control de roles y permisos para la gestión y manejo del código base.</p>
 
@@ -169,7 +171,71 @@ Oculta y empezará a hacer magia.</p>
 
 <p><strong>Listo! hicimos nuestro primer commit, Wujuuu!! ¡Esto tenemos que celebrarlo!</strong></p>
 
-<h4 id="continuara">Continuara…</h4>
+<p>Entonces ahora expliquemos en detalle cada uno de los comandos anteriores.</p>
+
+<p>Empecemos con el</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git add &lt;file&gt;
+</code></pre></div></div>
+<p>y si queremos agregar todos los archivos</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git add <span class="nb">.</span>
+</code></pre></div></div>
+<p>el punto indica que se agreguen todos!</p>
+
+<p>Cabe destacar en la linea de comandos no es necesario colocar el simbolo $, el uso de <esto> es para indicar que es una variable que sera reemplaza por la ruta y nombre de archivo, los &lt;&gt; no son necesarios, cuando ejecutes tu comando en la terminal.</esto></p>
+
+<p>Entonces.
+El comando git add, nos permite agregar archivos a nuestra area de preparacion.
+en ingles: Staging Area.</p>
+
+<p>Esto trae 2 nuevos elementos a la mesa:</p>
+
+<p>Staged area
+Unstaged area</p>
+
+<p>para ver el estado de donde se encuentran nuestros archivos ubicados usaremos el siguiente comando.</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git status
+</code></pre></div></div>
+
+<p>Esto nos mostrará, nuestros archivos y su ubicacion en las areas antes mencionadas.
+las que estan en unstaged ( por default ) los muestra en rojo y los que están en Staged  las mostrara en verde.</p>
+
+<p>para entender mejor esto, todos los archivos que sumemos al area de preparacion:
+staged changes. van a ser tomados en cuenta para cuando hagamos un commit.
+Es decir, para cuando queramos tomar una foto del estado del proyecto, estos elementos son los que van a ser guardados y mostrados en esa foto.</p>
+
+<p>Supongamos un set de grabación, todo lo que está en escena, es lo que va a mostrarse al espectador.</p>
+
+<p>Esa es nuestra area de preparacion ( staged )</p>
+
+<p>y lo que está en el backstage es lo que estaría en unstaged, lo que no se muestra en escena.</p>
+
+<p>la creación de esta escena o fotografía ( marcador en la línea de tiempo de nuestro proyecto ) se crea usando el comando.</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git commit <span class="nt">-m</span> “ un mensaje descriptivo de los cambios que se hicieron para esta escena”
+</code></pre></div></div>
+
+<p>Seguramente vas a estar interactuando con diferentes archivos y moviendolos entre un area a otra.</p>
+
+<p>Si ya hiciste un git add, pero luego te das cuenta que ese archivo no quieres que quede en el siguiente commit.</p>
+
+<p>para sacarlo del staged área el comando seria:</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git reset HEAD &lt;file&gt;
+</code></pre></div></div>
+
+<p>y si queremos sacar todos los archivos del staged ared</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>git reset
+</code></pre></div></div>
+
+<p>Estos serían todos los comandos básicos para manejar un flujo inicial de git.</p>
+
+<p>¡Felicidades! ¡Ya estás empezando a utilizar una maravillosa herramienta!</p>
+
+<p>Continuaremos con conceptos más avanzados próximamente….</p>
 
 
 
