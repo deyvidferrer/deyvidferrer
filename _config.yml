@@ -26,7 +26,7 @@ nav_exclude:                                            # The following paths ar
 author:
   name              : Deyvid Ferrer
   image             : /assets/profile.jpg
-  behance           : your_username
+#  behance           : your_username
 # dribbble          : your_username
   email             : deyvidferrer02@gmail.com
   facebook          : your_username
@@ -35,7 +35,7 @@ author:
   instagram         : deyvidferrer
 # kaggle            : your_username
   linkedin          : deyvid-ferrer-9607a245
-  medium            : your_username
+#  medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
@@ -68,7 +68,6 @@ analytics:
   enabled: true                                       # Set true to enable analytics
   google:
     tracking_id: UA-124843267-1
-
 
 ### Defaults for collections ###
 defaults:
