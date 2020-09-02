@@ -1,6 +1,6 @@
 ---
-title: Git de Novato a experto
-tags: [Git]
+title: Git de Novato a experto - Parte 1
+tags: [Git, Tutorial]
 style: border
 color: primary
 description: Aprenderemos las bases de git para ir avanzando y profundizando en todos las opciones que nos ofrece esta herramienta para gestionar nuestro código y convertirnos en unos expertos!.
