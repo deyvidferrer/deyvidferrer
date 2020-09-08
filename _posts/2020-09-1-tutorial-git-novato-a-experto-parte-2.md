@@ -1,5 +1,5 @@
 ---
-title: Git de Novato a experto - Parte 2
+title: Git de Novato a experto - Parte 2 y 2.1
 tags: [Git, Tutorial]
 style: border
 color: primary
@@ -87,17 +87,18 @@ git branch -d cambio-estilos.
 
 Con estos comandos nuevos, vas a ser capaz manejar tantas versiones / ramas / branches como necesites.
 
-
-<div id="checkout-commit"></div>
 # Parte 2.1 Git checkout commit
 -------------------------------------------------------------
 
 {% include elements/video.html id="ZpMlLL-mnyA" %}
 
-git checkout hash del commit
+[git checkout hash del commit](#checkout-commit)
+
 por ejemplo:
 
+```terminal
 git checkout edfb7e1501fb5942e3f25799c35294ede15ba7a8
+```
 
 En la clase de hoy veremos el comando git checkout y como viajar a commits anteriores, ya vimos el comando checkout anteriormente en la clase de como crear branches y movernos entre ellos, pero nos quedó pendiente el viaje entre commits.
 
@@ -105,8 +106,12 @@ Cabe destacar que debemos tener nuestro staged area y untaged area limpios, para
 
 Para poder obtener el hash del commit
 
+```terminal
 git log
+```
 
 con este comando veremos el codigo unico de cada commit, solo tenemos que copiarlo y luego ejecutar
 
+```terminal
 git checkout edfb7e1501fb5942e3f25799c35294ede15ba7a8
+```
