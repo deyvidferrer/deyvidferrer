@@ -1,5 +1,5 @@
 ---
-title: Git de Novato a experto - Parte 1
+title: como hacer control de versiones git curso practico
 tags: [Git, Tutorial]
 style: border
 color: primary

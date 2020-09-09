@@ -1,5 +1,5 @@
 ---
-title: Git de Novato a experto - Parte 2 y 2.1
+title: Como crear una rama en git bash
 tags: [Git, Tutorial]
 style: border
 color: primary

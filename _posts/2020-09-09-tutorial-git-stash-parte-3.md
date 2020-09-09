@@ -1,5 +1,5 @@
 ---
-title: Como hacer un git stash fácil y rápido - tutorial git parte 3
+title: Como cambiar de rama en git
 tags: [Git, Tutorial]
 style: border
 color: primary
