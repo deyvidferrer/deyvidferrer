@@ -1,5 +1,5 @@
 ---
-title: Como crear una rama en git bash
+title: Como crear una rama en git bash | TUTORIAL GIT #3 👽👽
 tags: [Git, Tutorial]
 style: border
 color: primary

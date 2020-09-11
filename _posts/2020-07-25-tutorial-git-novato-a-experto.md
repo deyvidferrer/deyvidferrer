@@ -1,5 +1,5 @@
 ---
-title: como hacer control de versiones git curso practico
+title: Como hacer control de versiones git curso practico | TUTORIAL GIT #3 👽👽
 tags: [Git, Tutorial]
 style: border
 color: primary

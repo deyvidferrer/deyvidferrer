@@ -1,5 +1,5 @@
 ---
-title: Como cambiar de rama en git
+title: COMO USAR GIT STASH | TUTORIAL GIT #3 👽👽
 tags: [Git, Tutorial]
 style: border
 color: primary
