@@ -3,10 +3,7 @@ title: Cómo actualizar sus credenciales de Git en Windows 👽👽
 tags: [Git, Credenciales, Windows]
 style: border
 color: primary
-description: $ git pull
-fatal: Error de autenticación para `repo url /`
-Aparentemente, actualizar mis credenciales de dominio también rompió mis credenciales de Git.
-.
+description: Git es una herramienta increíble. Sin embargo, hay ocasiones en que las cosas dentro de Git se rompen. Como por ejemplo: mis credenciales de git en Windows habían caducado, así que las cambié.
 ---
 
 ## Cómo actualizar sus credenciales de Git en Windows
