@@ -9,7 +9,7 @@ Aparentemente, actualizar mis credenciales de dominio también rompió mis crede
 .
 ---
 
-## Parte III - Como hacer un git stash fácil y rápido
+## Cómo actualizar sus credenciales de Git en Windows
 ----------
 
 Git es increíble y me encanta. Simple y llanamente. Funciona. Sin embargo, hay ocasiones en que las cosas dentro de Git se rompen. Y luego tienes que buscar en Google la solución.
