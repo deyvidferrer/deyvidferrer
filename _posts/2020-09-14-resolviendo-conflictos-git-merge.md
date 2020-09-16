@@ -1,5 +1,5 @@
 ---
-title: Cómo actualizar sus credenciales de Git en WINDOWS 👽👽
+title: Cómo resolver conflictos de fusión de Git 👽👽
 tags: [Git, Tutorial]
 style: border
 color: primary
