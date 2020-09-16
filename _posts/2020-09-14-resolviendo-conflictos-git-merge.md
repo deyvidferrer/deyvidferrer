@@ -100,10 +100,7 @@ $ git merge new_branch_to_merge_later
 Fusionar automáticamente merge.txt
 CONFLICTO (contenido): Fusionar conflicto en merge.txt
 Error de fusión automática; arregle los conflictos y luego confirme el resultado.
-```terminal
-
-
-
+```
 BOOM 💥. Aparece un conflicto. ¡Gracias, Git por informarnos sobre esto!
 
 **Cómo identificar conflictos de fusión**
@@ -133,14 +130,9 @@ $ cat merge.txt
 En nuestro editor de texto de la terminal se deberia mostrar algo como esto:
 
 ```terminal
-<<<<<<< CABEZA
-este es un contenido con el que meterse
-contenido para agregar
-=======
-contenido totalmente diferente para fusionar más tarde
->>>>>>> nueva_rama_para_fusionar_later
+<<<<<<< HEAD este es un contenido con el que meterse contenido para agregar ======= contenido totalmente diferente para fusionar más tarde >>>>>>> nueva_rama_para_fusionar_later
 Aquí hemos utilizado el comando cat para publicar el contenido del archivo merge.txt. Podemos ver algunas nuevas incorporaciones extrañas.
-<<<<<<< CABEZA
+<<<<<<< HEAD
 =======
 >>>>>>> nueva_rama_para_fusionar_later
 ```
@@ -196,6 +188,7 @@ git merge --abort
 La ejecución de git merge con la opción --abort saldrá del proceso de fusión y devolverá la rama al estado anterior a que comenzara la fusión.
 
 ### Resumen
+
 Los conflictos de fusión pueden ser una experiencia intimidante. Afortunadamente, Git ofrece herramientas poderosas para ayudar a navegar y resolver conflictos. Git puede manejar la mayoría de las fusiones por sí solo con funciones de fusión automática. Surge un conflicto cuando dos ramas separadas han realizado ediciones en la misma línea en un archivo, o cuando un archivo se ha eliminado en una rama pero editado en la otra. Lo más probable es que surjan conflictos cuando se trabaja en un entorno de equipo.
 
 ------------------------
