@@ -8,7 +8,8 @@ description: Los sistemas de control de versiones tienen que ver con la gestión
 
 {% include elements/video.html id="cBMu43Uj9tA" %}
 
-#Conflictos de fusión de Git
+## Conflictos de fusión de Git
+---------------------------------
 
 Para empezar, los sistemas de control de versiones tienen que ver con la gestión de contribuciones entre varios autores distribuidos. A veces, varios desarrolladores pueden intentar editar el mismo contenido. Si el desarrollador A intenta editar el código que el desarrollador B está editando, puede producirse un conflicto. Para aliviar la aparición de conflictos, los desarrolladores trabajarán en ramas aisladas separadas.
 
@@ -81,11 +82,11 @@ Con esta nueva rama: new_branch_to_merge_later hemos creado una confirmación qu
 Cambiado a la rama 'maestra'
 
 ```terminal
-git checkout master
+$ git checkout master
 
-echo "contenido para agregar" >> merge.txt
+$ echo "contenido para agregar" >> merge.txt
 
-git commit -am "contenido agregado a merge.txt"
+$ git commit -am "contenido agregado a merge.txt"
 
 [master 24fbe3c] agregó contenido a merge.tx
 1 archivo modificado, 1 inserción (+)
@@ -110,7 +111,7 @@ BOOM 💥. Aparece un conflicto. ¡Gracias, Git por informarnos sobre esto!
 Como hemos experimentado en el ejemplo anterior, Git producirá una salida descriptiva que nos permitirá saber que ha ocurrido un CONFLICTO. Podemos obtener más información ejecutando el comando git status
 
 ```terminal
-$git status
+$ git status
 
 (arregla los conflictos y ejecuta "git commit")
 (use "git merge --abort" para cancelar la combinación)
@@ -146,7 +147,7 @@ Aquí hemos utilizado el comando cat para publicar el contenido del archivo merg
 
 Piense en estas nuevas líneas como "divisores de conflictos". La línea ======= es el "centro" del conflicto. Todo el contenido entre el centro y la línea <<<<<<< HEAD es contenido que existe en el maestro de rama actual al que apunta la referencia HEAD. Alternativamente, todo el contenido entre el centro y >>>>>>> new_branch_to_merge_later es contenido que está presente en nuestra rama de fusión.
 
-##Cómo resolver conflictos de fusión usando la línea de comando
+## Cómo resolver conflictos de fusión usando la línea de comando
 
 La forma más directa de resolver un conflicto de fusión es editar el archivo en conflicto. Abra el archivo merge.txt en su editor favorito. Para nuestro ejemplo, simplemente eliminemos todos los divisores de conflictos. El contenido de merge.txt modificado debería verse así:
 
@@ -194,7 +195,7 @@ git merge --abort
 ```
 La ejecución de git merge con la opción --abort saldrá del proceso de fusión y devolverá la rama al estado anterior a que comenzara la fusión.
 
-###Resumen
+### Resumen
 Los conflictos de fusión pueden ser una experiencia intimidante. Afortunadamente, Git ofrece herramientas poderosas para ayudar a navegar y resolver conflictos. Git puede manejar la mayoría de las fusiones por sí solo con funciones de fusión automática. Surge un conflicto cuando dos ramas separadas han realizado ediciones en la misma línea en un archivo, o cuando un archivo se ha eliminado en una rama pero editado en la otra. Lo más probable es que surjan conflictos cuando se trabaja en un entorno de equipo.
 
 ------------------------
