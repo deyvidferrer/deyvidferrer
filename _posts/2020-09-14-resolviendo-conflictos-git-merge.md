@@ -1,5 +1,5 @@
 ---
-title: Cómo resolver conflictos de fusión de Git 👽👽
+title: Cómo resolver conflictos de fusión en Git (Merge) 👽👽
 tags: [Git, Tutorial]
 style: border
 color: primary
