@@ -18,9 +18,9 @@ $ git remote add
 Nota: debes estar dentro del directorio donde está almacenado tu repositorio.
 
 El comando git remote add recibe dos parametros:
-Un nombre remoto, por ejemplo, origin
+Un nombre remoto, como por ejemplo: origin
+
 Una URL remota, por ejemplo, https://github.com/tunombredeusuariodegit/repo.git
-Por ejemplo:
 
 ```terminal
 $ git remote add origin https://github.com/tunombredeusuariodegit/turepo.git
