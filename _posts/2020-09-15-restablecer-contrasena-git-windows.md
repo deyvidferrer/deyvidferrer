@@ -3,7 +3,7 @@ title: Cómo actualizar sus credenciales de Git en WINDOWS 👽👽
 tags: [Git, Windows]
 style: border
 color: primary
-description: Git es una herramienta increíble. Sin embargo, hay ocasiones en que las cosas dentro de Git se rompen. Como por ejemplo: mis credenciales de git en Windows habían caducado, así que las cambié.
+description: Git es una herramienta increíble. Sin embargo, hay ocasiones en que las cosas dentro de Git se rompen.
 ---
 
 ## Cómo actualizar sus credenciales de Git en Windows
