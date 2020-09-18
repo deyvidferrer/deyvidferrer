@@ -1,0 +1,7 @@
+- name: Ingles
+  percentage: 68
+  color: success
+
+- name: Frances
+  percentage: 3
+  color: warning

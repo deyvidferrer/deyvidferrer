@@ -14,7 +14,14 @@ y me considero un curioso, autodidacta altamente creativo, con una gran capacida
 
 <div class="row">
 {% include about/skills.html title="Habilidades de Programacion" source=site.data.programming-skills %}
+
+{% include about/skills.html title="Habilidades de Diseño" source=site.data.designer-skills %}
+</div>
+
 {% include about/skills.html title="Otras Habilidades" source=site.data.other-skills %}
+</div>
+
+{% include about/skills.html title="Idiomas" source=site.data.Idiomas-skills %}
 </div>
 
 <div class="row">

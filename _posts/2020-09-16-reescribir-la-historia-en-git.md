@@ -7,23 +7,25 @@ description: Una de las reescrituras históricas más simples que podemos hacer 
 ---
 
 # Git Interactive Rebase, Squash, Modify
-
-**"Por favor, vuelva a establecer la base sobre el Master y fusionaremos su solicitud de extracción ( pull request )".**
+-------------------------
+**"Por favor, vuelva a establecer la base sobre el Master y fusionaremos su solicitud de extracción(pull request)".**
 
 **"¿Podrías aplastar (Squas) tus commits juntos para que obtengamos un historial de git limpio y reversible?"**
 
 **"¿Puedes reescribir el mensaje de tu commit para describir mejor el problema que resuelve y cómo lo resuelve?".**
 
 Preguntas como estas se hacen comúnmente en las pull request. Veamos por qué existen, cómo realizarlos y sus posibles problemas.
+-------------------------
 
 # Reformula el último mensaje de confirmación
 
-Una de las reescrituras históricas más simples que podemos hacer con git es cambiar el último mensaje de confirmación. Supongamos que, justo después de realizar una confirmación, encuentra un error tipográfico en su descripción o encuentra una mejor manera de describir el conjunto de cambios. Para hacer la corrección, ejecuta:
+Una de las reescrituras históricas más simples que podemos hacer con git es cambiar el último mensaje de confirmación. Supongamos que, justo después de realizar una confirmación, encuentra un error tipográfico en su descripción o encuentra una mejor manera de describir el conjunto de cambios.
+
+Para hacer la corrección, ejecuta:
 ```terminal
 $ git commit --ammend
  ```
-el parámetro --ammend ( Enmendar )
-Abrirá un editor con el último mensaje de confirmación, para que puedas modificarlo. Después de guardar, esta acción va a sobreescribir el último commit y por ende contendrá los mismos cambios y pero con el nuevo mensaje.
+el parámetro **--ammend ( Enmendar )** Abrirá un editor con el último mensaje de confirmación, para que puedas modificarlo. Después de guardar, esta acción va a sobreescribir el último commit y por ende contendrá los mismos cambios y pero con el nuevo mensaje.
 
 Esto puede ser útil para incluir archivos que olvidó rastrear o incluir modificaciones a los archivos que acaba de confirmar. Para hacerlo, puede agregar los cambios y luego realizar la modificación:
  ```terminal
@@ -39,8 +41,7 @@ git commit --amend --author = "Deyvid Ferrer <deyvidferrer@mail.com>"
 
 Ahora puede cambiar el último commit de su repositorio para incluir cambios más recientes en los archivos y / o mejorar el mensaje de confirmación.
 
-Importante: Pero no empiece a enmendar todo, antes de comprender la última sección descrita más abajo titulada
-"PELIGRO".
+**Importante: Pero no empiece a enmendar todo, antes de comprender la última sección descrita más abajo titulada "PELIGRO".**
 
 --------------------------
 

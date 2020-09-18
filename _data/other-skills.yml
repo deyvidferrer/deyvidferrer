@@ -1,20 +1,11 @@
-- name: Adobe Photoshop
-  percentage: 80
+- name: Fotografia
+  percentage: 40
   color: success
 
-- name: Adobe Lightroom
-  percentage: 90
+- name: Edicion de Video
+  percentage: 60
   color: success
 
-- name: Adobe Illustrator
+- name: SEO
   percentage: 65
   color: info
-
-- name: Adobe Premiere
-  percentage: 50
-  color: info
-
-- name: Adobe Audition
-  percentage: 45
-  color: warning
-  

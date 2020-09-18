@@ -1,19 +1,27 @@
 - name: HTML5/CSS3
-  percentage: 90
+  percentage: 100
   color: danger
 
 - name: Ruby
-  percentage: 85
+  percentage: 90
   color: info
 
 - name: JavaScript
-  percentage: 70
+  percentage: 82
   color: dark
 
 - name: Java
-  percentage: 56
+  percentage: 43
   color: warning
 
 - name: SQL
   percentage: 80
   color: warning
+
+- name: Automation
+  percentage: 80
+  color: info
+
+- name: Selenium
+  percentage: 85
+  color: info
