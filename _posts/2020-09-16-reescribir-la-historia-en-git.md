@@ -5,17 +5,18 @@ style: border
 color: primary
 description: Una de las reescrituras históricas más simples que podemos hacer con git es cambiar el último mensaje de confirmación.
 ---
-#Cómo reescribir el historial en GIT | Git Interactive Rebase, Squash, Modify
 
-"Por favor, vuelva a establecer la base sobre el Master y fusionaremos su solicitud de extracción ( pull request )".
+# Git Interactive Rebase, Squash, Modify
 
-"¿Podrías aplastar (Squas) tus commits juntos para que obtengamos un historial de git limpio y reversible?"
+**"Por favor, vuelva a establecer la base sobre el Master y fusionaremos su solicitud de extracción ( pull request )".**
 
-"¿Puedes reescribir el mensaje de tu commit para describir mejor el problema que resuelve y cómo lo resuelve?".
+**"¿Podrías aplastar (Squas) tus commits juntos para que obtengamos un historial de git limpio y reversible?"**
+
+**"¿Puedes reescribir el mensaje de tu commit para describir mejor el problema que resuelve y cómo lo resuelve?".**
 
 Preguntas como estas se hacen comúnmente en las pull request. Veamos por qué existen, cómo realizarlos y sus posibles problemas.
 
-#Reformula el último mensaje de confirmación
+# Reformula el último mensaje de confirmación
 
 Una de las reescrituras históricas más simples que podemos hacer con git es cambiar el último mensaje de confirmación. Supongamos que, justo después de realizar una confirmación, encuentra un error tipográfico en su descripción o encuentra una mejor manera de describir el conjunto de cambios. Para hacer la corrección, ejecuta:
 ```terminal
@@ -41,10 +42,14 @@ Ahora puede cambiar el último commit de su repositorio para incluir cambios má
 Importante: Pero no empiece a enmendar todo, antes de comprender la última sección descrita más abajo titulada
 "PELIGRO".
 
-#Reformular otros mensajes de confirmación
+--------------------------
+
+# Reformular otros mensajes de confirmación
+
  ```terminal
 $ git Interactive Rebase
  ```
+
 git rebase vuelve a aplicar los commits, uno por uno, en el mismo orden, de tu rama actual a otra. Acepta varias opciones y parámetros, por lo que es una explicación  bastante por encima, de lo contrario podríamos escribir un libro solo sobre esto.
 
 Una opción interesante que acepta es --interactive (-i para abreviar), que abrirá un editor con una lista de las commits que están a punto de cambiarse. Esta lista acepta comandos, lo que te permitira editar la lista antes de iniciar la acción de rebase.
@@ -85,7 +90,8 @@ Vemos los cuatro últimos commits, de la más antigua a la más reciente.
 Buen trabajo explicando, git!
 pick (p para abreviar) es la acción predeterminada. En este caso, volvería a aplicar la confirmación tal cual, sin cambios en su contenido o mensaje. Guardar (y ejecutar) este archivo no haría cambios en el repositorio.
 
-Si digo reescribir (r para abreviar) en una confirmación, quiero editar:
+**Si digo reescribir (r para abreviar)** en una confirmación, quiero editar:
+
  ```terminal
 pick 07c5aes Arreglando la distribucion de listas en el index
 pick de9b1eb Fix verificador de articulos
@@ -96,41 +102,48 @@ Cuando guarde y salga del editor, git seguirá los comandos descritos, aterrizan
 ```terminal
 deyvidferrer.com tc-git-rebase % git rebase -i HEAD~4
 [detached HEAD dd62a66] deja de resaltar las lineas
- Author: MiOtroYo
+ Author: **MiOtroYo**
  Date: Fri Oct 31 10:52:26 2020 -0500
  2 files changed, 39 insertions(+), 42 deletions(-)
 Successfully rebased and updated refs/heads/tc-git-rebase.
  ```
-Ahora el MiOtroYo, dice en su mensaje de commit "deja de resaltar las lineas"
+Ahora el **MiOtroYo**, dice en su mensaje de commit "deja de resaltar las lineas"
 
-¡Logro desbloqueado!
+**¡Logro desbloqueado!**
 
 Ahora puede cambiar el mensaje de cualquier información que desee. Puede hacerlo, sólo asegúrese de comprender la sección "PELIGRO".
+------------------------------
 
-#Squash
+# Squash
+
 Otros dos comandos que nos ofrece rebase interactive son:
 
-squash (s para abreviar), que fusiona el commit con el anterior (el de la línea anterior)
+**squash (s para abreviar)**, que fusiona el commit con el anterior (el de la línea anterior)
 
-fixup (f para abreviar), que actúa como "squash", pero descarta el mensaje de esta confirmación
+**fixup (f para abreviar)**, que actúa como "squash", pero descarta el mensaje de esta confirmación
 
-Continuaremos trabajando en el ejemplo de rebase en el que trabajamos antes. Tuvimos cuatro commits, la mía y otras tres de MiOtroYo, que estaban relacionadas con su publicación anterior de las listas en el index:
+Continuaremos trabajando en el ejemplo de rebase en el que trabajamos antes. Tuvimos cuatro commits, la mía y otras tres de **MiOtroYo**, que estaban relacionadas con su publicación anterior de las listas en el index:
+
 ```terminal
 pick 07c5aes Arreglando la distribucion de listas en el index
 pick de9b1eb Fix verificador de articulos
 pick 2d66753 Elminando todos los resaltados en la pagina
 pick fa20af3 git interactive rebase, squash, amend
  ```
-Supongamos que quiero fusionar las commits de MiOtroYo, porque pertenecen al mismo conjunto de cambios lógico, por lo que podemos revertirlo fácilmente si descubrimos que preferimos no tener esos cambios en este repositorio.
+
+Supongamos que quiero fusionar las commits de **MiOtroYo**, porque pertenecen al mismo conjunto de cambios lógico, por lo que podemos revertirlo fácilmente si descubrimos que preferimos no tener esos cambios en este repositorio.
 
 Queremos mantener el primer mensaje de confirmación y aplastar las dos commits posteriores en la anterior. Cambio de pick a squash donde sea apropiado:
+
 ```terminal
 pick 07c5abd Arreglando la distribucion de listas en el index
 s de9b1eb Fix verificador de articulos
 s 3e7ee36 Elminando todos los resaltados en la pagina
 pick fa20af3 git interactive rebase, squash, amend
 ```
+
 Guarde, y aterrizó en el editor para decidir el mensaje de confirmación de las tres commits combinadas (vea cómo se concatenan una tras otra):
+
 ```terminal
 # This is a combination of 3 commits.
 # The first commit's message is:
@@ -147,7 +160,7 @@ Elminando todos los resaltados en la pagina
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
 #
-# Author:    MiOtroYo
+# Author:    **MiOtroYo**
 # Date:      Tue Sep 2 09:39:07 2020 -0500
 #
 # rebase in progress; onto 71d4789
@@ -156,7 +169,7 @@ Elminando todos los resaltados en la pagina
 ```
 Decido eliminar el tercer mensaje de confirmación y agregar una nota más relevante al segundo mensaje de confirmación.
 
-Guarde el editor y las cuatro commits se transformaron en dos: la de MiOtroYo y la mía después.
+Guarde el editor y las cuatro commits se transformaron en dos: la de **MiOtroYo** y la mía después.
 
 **¡Bueno!**
 
@@ -176,8 +189,9 @@ Al guardar se generará el mismo resultado: 2 commits en lugar de 4, cada una co
 **¡Logro desbloqueado!**
 
 Ahora puede fusionar commits. Como siempre, tenga en cuenta la sección PELIGRO.
+-------------------------------
 
-#Rebase encima del Máster
+# Rebase encima del Máster
 
 Bifurcamos una biblioteca de código abierto, comenzamos a trabajar en una rama de funciones y dominamos en el proyecto ascendente. Nuestra historia se parece a:
 
@@ -212,18 +226,22 @@ $ git rebase upstream/master
 $ git push --force origin feature
 ```
 
-¡Logro desbloqueado! Su rama de características se aplicará sobre el último Master de la bifurcación original.
+**¡Logro desbloqueado!**
 
-
-#PELIGRO: Estás reescribiendo la historia.
+Su rama de características se aplicará sobre el último Master de la bifurcación original.
 ----------------------------------------------
 
-¿Ves el --force en el último comando git push? Eso significa que estamos sobrescribiendo el historial del repositorio. Esto siempre es seguro en las commits que no compartimos con otros miembros del equipo o en las ramas que nos pertenecen.
+# PELIGRO: Estás reescribiendo la historia.
+----------------------------------------------
+
+¿Ves el **--force** en el último comando git push? Eso significa que estamos sobrescribiendo el historial del repositorio. Esto siempre es seguro en las commits que no compartimos con otros miembros del equipo o en las ramas que nos pertenecen.
 
 Pero si fuerza las ediciones push que ya se compartieron con el equipo (commits que existen fuera de mi repositorio, como los cambios que hice en las commits de PGP que ya se han compartido), entonces la rama de todos se desincroniza.
 
-Reescribir el historial significa abandonar los commits existentes y crear nuevas, que pueden ser muy similares pero son diferentes. Si otros basan el trabajo en sus commits anteriores, y luego usted reescribe y fuerza sus commits, los miembros de su equipo tendrán que volver a fusionar su trabajo (si notan la pérdida potencial).
+Reescribir el historial significa abandonar los commits existentes y crear nuevas, que pueden ser muy similares pero son diferentes.
 
-Es una buena práctica, colocar en el prefijo de nuestras ramas, nuestras iniciales, lo que indica que esas commits pueden reescribirse y otras no deben agregar commits a la rama. Cuando esos commits aterrizan en master o en una rama compartida, nunca los volvemos a escribir.
+**Si otros basan el trabajo en sus commits anteriores, y luego usted reescribe y fuerza sus commits, los miembros de su equipo tendrán que volver a fusionar su trabajo (si notan la pérdida potencial).**
+
+Es una buena práctica, **colocar en el prefijo de nuestras ramas, nuestras iniciales**, lo que indica que esas commits pueden reescribirse y otras no deben agregar commits a la rama. Cuando esos commits aterrizan en master o en una rama compartida, nunca los volvemos a escribir.
 
 Por lo tanto, reescriba el historial de git, siempre que las commits reescritas existan solo en su repositorio, o usted y su equipo sepan que nadie más debería basar el trabajo en ellas.
