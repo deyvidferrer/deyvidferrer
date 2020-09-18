@@ -3,6 +3,7 @@ title: Cómo SUBIR un PROYECTO A GITHUB desde CONSOLA
 tags: [Git, Github]
 style: border
 color: primary
+thumbs: 2020-09-15-agregar-repositorio-remoto-git.png
 description: En este video, vamos a aprender como es la creación de un repositorio y como conectarlo a nuestro proyecto local con git y su subida a Github.
 ---
 
