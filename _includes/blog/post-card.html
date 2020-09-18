@@ -31,7 +31,6 @@
       {%- if post.thumbs -%}
       <img class="card-img-top" src="assets/{{post.thumbs}}" alt="image for post">
       {%- endif -%}
-      {%- if post.description -%}
       <h3 class="card-title">{{ post.title }}</h3>
       <p class="card-text">
         {% for tag in post.tags %}
