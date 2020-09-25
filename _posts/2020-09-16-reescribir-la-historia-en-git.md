@@ -6,18 +6,9 @@ color: primary
 description: Una de las reescrituras históricas más simples que podemos hacer con git es cambiar el último mensaje de confirmación.
 ---
 
-# Git Interactive Rebase, Squash, Modify
+{% include elements/video.html id="eHIsHiaddwk" %}
 -------------------------
-**"Por favor, vuelva a establecer la base sobre el Master y fusionaremos su solicitud de extracción(pull request)".**
-
-**"¿Podrías aplastar (Squas) tus commits juntos para que obtengamos un historial de git limpio y reversible?"**
-
-**"¿Puedes reescribir el mensaje de tu commit para describir mejor el problema que resuelve y cómo lo resuelve?".**
-
-Preguntas como estas se hacen comúnmente en las pull request. Veamos por qué existen, cómo realizarlos y sus posibles problemas.
--------------------------
-
-# Reformula el último mensaje de confirmación
+## Reformula el último mensaje de confirmación
 
 Una de las reescrituras históricas más simples que podemos hacer con git es cambiar el último mensaje de confirmación. Supongamos que, justo después de realizar una confirmación, encuentra un error tipográfico en su descripción o encuentra una mejor manera de describir el conjunto de cambios.
 
@@ -194,7 +185,7 @@ Ahora puede fusionar commits. Como siempre, tenga en cuenta la sección PELIGRO.
 
 # Rebase encima del Máster
 
-Bifurcamos una biblioteca de código abierto, comenzamos a trabajar en una rama de funciones y dominamos en el proyecto ascendente. Nuestra historia se parece a:
+Bifurcamos una rama y comenzamos a trabajar en otra rama de funcionalidades y avanzamos en esta nueva rama. Nuestra historia se parece a:
 
 ```terminal
       A---B---C feature
