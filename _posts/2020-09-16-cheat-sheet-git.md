@@ -30,13 +30,13 @@ Defina el nombre del autor que se utilizará para todas las confirmaciones en el
 $ git add <directory>
 ```
 Organice todos los cambios en <directorio> para la próxima confirmación.
-Reemplace <directorio> con un <archivo> para cambiar un archivo específico.
+Reemplace <directorio> con un **archivo** para cambiar un archivo específico.
 
 
 ```terminal
 $ git commit -m
 ```
-Confirme la instantánea por etapas, pero en lugar de iniciar un editor de texto, use <mensaje> como mensaje de confirmación."<message>"
+Confirme la instantánea por etapas, pero en lugar de iniciar un editor de texto, use **mensaje** como mensaje de confirmación."<message>"
 
 
 ```terminal
@@ -63,8 +63,8 @@ directorio de trabajo.
 ```terminal
 $ git revert <commit>
 ```
-Crear una nueva confirmación que deshaga todos los cambios realizados en
-<commit>, luego aplíquelo a la rama actual.
+Crear un nuevo commit que deshaga todos los cambios realizados en el commit que se quiere revertir,
+luego se aplica a la rama actual.
 
 
 ```terminal
@@ -106,7 +106,7 @@ Agregue la marca --relative-date para mostrar la información de la fecha o --al
 ```terminal
 $ git branch
 ```
-Muestra todas las ramas en su repositorio. Si Agregua un argumento <nombrederama> esta creara una nueva rama con ese nombre.
+Muestra todas las ramas en su repositorio. Si Agregua un argumento **nombrederama** esta creara una nueva rama con ese nombre.
 
 
 ```terminal
@@ -118,7 +118,7 @@ Crea y se mueve a una nueva rama llamada <nombrederama>.
 ```terminal
 $ git merge <branch>
 ```
-Fusiona la rama enviada en < branch > con la rama en la que estas posicionado actualmente.
+Fusiona la rama enviada en **branch** con la rama en la que estas posicionado actualmente.
 
 Continaua...
 ------------------------
