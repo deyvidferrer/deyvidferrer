@@ -120,7 +120,7 @@ $ git merge <branch>
 ```
 Fusiona la rama enviada en **branch** con la rama en la que estas posicionado actualmente.
 
-Continara...
+### Continara...
 ------------------------
 Espero que esto te ayude en tu dia a dia usando Git.
 
