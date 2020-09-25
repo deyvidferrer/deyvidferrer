@@ -5,8 +5,7 @@ style: border
 color: primary
 description: Todas las instrucciones elementales para trabajar con git.
 ---
--------------------------
-<div class="md-6">
+------------------------
 
 ## Comandos Basicos:
 ------------------------------
@@ -86,10 +85,6 @@ $ git clean -n
 Muestra qué archivos se eliminarían del directorio de trabajo.
 Utilice el indicador -f en lugar del indicador -n para ejecutar la limpieza.
 
-</div>
-
-
-<div class="md-6">
 ## REESCRIBIR LA HISTORIA DE GIT
 ------------------------------
 ```terminal
@@ -130,8 +125,6 @@ $ git merge <branch>
 ```
 
 Fusiona la rama enviada en < branch > con la rama en la que estas posicionado actualmente.
-
-</div>
 
 Espero que esto te ayude en tu dia a dia usando Git.
 
