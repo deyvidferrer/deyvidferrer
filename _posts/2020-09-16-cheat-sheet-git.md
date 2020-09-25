@@ -6,7 +6,7 @@ color: primary
 description: Todas las instrucciones elementales para trabajar con git.
 ---
 ## Comandos Basicos:
-
+------------------------------------------------
 ```terminal
 $ git init <directory>
 ```
@@ -59,7 +59,7 @@ Muestra cambios sin etapas entre su índice y
 directorio de trabajo.
 
 ## DESHACER CAMBIOS:
-
+------------------------------------------------
 ```terminal
 $ git revert <commit>
 ```
@@ -81,7 +81,7 @@ Muestra qué archivos se eliminarían del directorio de trabajo.
 Utilice el indicador -f en lugar del indicador -n para ejecutar la limpieza.
 
 ## REESCRIBIR LA HISTORIA DE GIT
-
+------------------------------------------------
 ```terminal
 $ git commit --amend
 ```
@@ -102,7 +102,7 @@ Agregue la marca --relative-date para mostrar la información de la fecha o --al
 
 
 ## GIT BRANCHES
-
+------------------------------------------------
 ```terminal
 $ git branch
 ```
@@ -120,7 +120,7 @@ $ git merge <branch>
 ```
 Fusiona la rama enviada en **branch** con la rama en la que estas posicionado actualmente.
 
-Continaua...
+Continara...
 ------------------------
 Espero que esto te ayude en tu dia a dia usando Git.
 
