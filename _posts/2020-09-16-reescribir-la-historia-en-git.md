@@ -183,6 +183,8 @@ Al guardar se generará el mismo resultado: 2 commits en lugar de 4, cada una co
 Ahora puede fusionar commits. Como siempre, tenga en cuenta la sección PELIGRO.
 -------------------------------
 
+{% include elements/video.html id="_vbWf1YV3pU" %}
+
 # Rebase encima del Máster
 
 Bifurcamos una rama y comenzamos a trabajar en otra rama de funcionalidades y avanzamos en esta nueva rama. Nuestra historia se parece a:
