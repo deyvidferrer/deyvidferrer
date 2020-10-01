@@ -8,7 +8,7 @@ description: Una de las reescrituras históricas más simples que podemos hacer 
 
 {% include elements/video.html id="eHIsHiaddwk" %}
 -------------------------
-## Reformula el último mensaje de confirmación
+## Reformula el mensaje del último commit
 
 Una de las reescrituras históricas más simples que podemos hacer con git es cambiar el último mensaje de confirmación. Supongamos que, justo después de realizar una confirmación, encuentra un error tipográfico en su descripción o encuentra una mejor manera de describir el conjunto de cambios.
 
@@ -36,7 +36,7 @@ Ahora puede cambiar el último commit de su repositorio para incluir cambios má
 
 --------------------------
 
-# Reformular otros mensajes de confirmación
+# Reformular otros mensajes de COMMITS
 
  ```terminal
 $ git Interactive Rebase
@@ -106,7 +106,9 @@ Ahora el **MiOtroYo**, dice en su mensaje de commit "deja de resaltar las lineas
 Ahora puede cambiar el mensaje de cualquier información que desee. Puede hacerlo, sólo asegúrese de comprender la sección "PELIGRO".
 ------------------------------
 
-# Squash
+{% include elements/video.html id="S_mY7k7LPv8" %}
+
+# Combinando Commits con SQUASH
 
 Otros dos comandos que nos ofrece rebase interactive son:
 
