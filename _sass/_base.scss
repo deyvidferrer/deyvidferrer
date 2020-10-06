@@ -9,3 +9,13 @@ body {
 .badge {
   font-weight: 500;
 }
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('/assets/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: solid 5px #000;
+}
