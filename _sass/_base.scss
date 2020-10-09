@@ -11,10 +11,10 @@ body {
 }
 
 .masthead {
-  height: 80vh;
+  height: 40vh;
   min-height: 460px;
   background-image: url('/assets/banner.jpg');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   // border: solid 5px #000;
