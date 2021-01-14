@@ -19,3 +19,12 @@ body {
   background-repeat: no-repeat;
   // border: solid 5px #000;
 }
+
+.logo {
+  height: 50px;
+  background-image: url('/assets/logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  // border: solid 5px #000;
+}

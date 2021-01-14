@@ -30,6 +30,7 @@
 .navbar-brand {
   margin-bottom: -14px;
   &::after {
-    margin-top: -0.25em;
+    //margin-top: -0.25em;
+    margin-top: 0em;
   }
 }
