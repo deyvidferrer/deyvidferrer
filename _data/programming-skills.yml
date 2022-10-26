@@ -6,7 +6,7 @@
   percentage: 90
   color: info
 
-- name: JavaScript
+- name: JavaScript / Typescript
   percentage: 82
   color: dark
 
@@ -18,7 +18,7 @@
   percentage: 80
   color: warning
 
-- name: Automation
+- name: QA Automation ( Frontend / Backend )
   percentage: 80
   color: info
 

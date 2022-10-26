@@ -1,3 +1,11 @@
 - name: Ingles
   percentage: 68
   color: success
+
+- name: Aleman
+  percentage: 5
+  color: warning
+
+- name: Frances
+  percentage: 3
+  color: warning

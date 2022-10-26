@@ -1,11 +1,15 @@
 - name: Fotografia
-  percentage: 40
+  percentage: 80
   color: success
 
 - name: Edicion de Video
   percentage: 60
   color: success
 
-- name: SEO
+- name: Tocar la guitarra
   percentage: 65
+  color: info
+
+- name: Hacer Café
+  percentage: 85
   color: info
