@@ -16,18 +16,18 @@ es una herramienta basada en NodeJS y posee diferentes libreraias integradas y r
 
 ## Tabla de Contenido 
 
-- [Mobile and Web test automation framework with support to interact with APIs](#mobile-and-web-test-automation-framework-with-support-to-interact-with-apis)
-  - [Table of contents](#table-of-contents)
-- [Getting started](#getting-started)
-    - [Pre-requisites](#pre-requisites)
-    - [Mobile-Exclusive](#mobile-exclusive)
-      - [Installing-Appium-Android-Studio](#installing-appium-android-studio)
-      - [Configure environment variable](#configure-environment-variable)
-      - [Creating new virtual device:](#creating-new-virtual-device)
-- [First time run](#first-time-run)
-    - [Run tests by tag @run](#run-tests-by-tag-run)
-    - [Generate Allure-Reports after an execution](#generate-allure-reports-after-an-execution)
-- [Folders structure](#folders-structure)
+- [# Herramienta de Automatización de Frontend tanto para dispositivos Mobiles como paginas Web, con soporte para interactuar con APIs.](#mobile-and-web-test-automation-framework-with-support-to-interact-with-apis)
+  - [Tabla de Contenido](#table-of-contents)
+- [Guia de iniciacion](#getting-started)
+    - [Pre-requisitos](#pre-requisites)
+    - [Automatización Mobile](#mobile-exclusive)
+      - [Instalación de Appium](#installing-appium-android-studio)
+      - [Configuracion de variables de entorno](#configure-environment-variable)
+      - [Creacion de nuevos dispositivos virtuales ( Emuladores ):](#creating-new-virtual-device)
+- [Primera Ejecución](#first-time-run)
+    - [Ejecutar test por etiquetas / tag @run](#run-tests-by-tag-run)
+    - [Generar reportes de Allure luego de la ejecución](#generate-allure-reports-after-an-execution)
+- [Estructura del Proyecto](#folders-structure)
   - [App](#app)
   - [Config](#config)
   - [features](#features)
@@ -50,9 +50,9 @@ es una herramienta basada en NodeJS y posee diferentes libreraias integradas y r
   - [Commits:](#commits)
 - [Process](#process)
 
-# Getting started
-### Pre-requisites
-### Software list to be installed
+# Guia de Iniciacíon
+### Pre-requisitos
+### Lista de aplicaciones / Herramientas / Software que debe ser instalado
 - Git
 - Nodejs
 - Npm
@@ -68,63 +68,69 @@ es una herramienta basada en NodeJS y posee diferentes libreraias integradas y r
 - Vizor - opcional ( para ver e interactuar con dispositivos locales )
 - SCRCPY ( opcion libre para mac )
 
-- Install a [Git Client](https://git-scm.com/downloads/guis) and clone Automation project.
-- Install latest version of Node.js from the [official website](https://nodejs.org/) or using [nvm](https://github.com/creationix/nvm) (nvm approach is preferred).
-	-  If you install Node.js from the official website, you must check the 'Tools for Native Modules' checkbox during the installation (it is not checked by default).
-- Go to [official website JDK 1.8 ](https://www.oracle.com/sa/java/technologies/javase/javase-jdk8-downloads.html), go to *Java SE Development Kit* download and install the last version.
+- Instalar un cliente git [Git Client](https://git-scm.com/downloads/guis) y clonar el proyecto base en mi github
+- Instalar la version 14 de Node.js desde el sitio oficial [official website](https://nodejs.org/) o usando [nvm](https://github.com/creationix/nvm) (se recomienda el uso del manejador de versioens NVM).
+	-  Si usted instala Node.js desde el sitio oficial asegurese de que el  'Tools for Native Modules' checkbox este habilitado durante la instalacion (No esta activado por default).
+- Ir al [official website JDK 1.8 ](https://www.oracle.com/sa/java/technologies/javase/javase-jdk8-downloads.html), go to *Java SE Development Kit* descarga e instala la ultima version disponible.
 
-### Mobile-Exclusive
+### Automatización Mobile
 
-#### Installing-Appium-Android-Studio
+#### Instalaccion de Appium
 
-- Install Android Studio from the [official website](https://developer.android.com/studio).
-- Lastest Appium Server version from the [official website](http://appium.io/).
+- Instalar android estudio desde la web oficial [official website](https://developer.android.com/studio).
+- Versiones mas recientes desde la web oficial [official website](http://appium.io/).
+- Las versiones mas recientes de appium estan divididas, es decir, una version para el servidor y otra version para el inspector.
+  - [Appium-inspector](https://github.com/appium/appium-inspector/releases)
+  - [Appium-server-GUI](https://github.com/appium/appium-desktop/releases)
 
-#### Configure environment variable
 
-1. Right click the Computer icon.
-2. Choose Properties from the context menu.
-3. Click the Advanced system settings link.
-4. Click Environment Variables. 
-5. In the section System Variables, create or edit **"ANDROID_HOME"** variable and set path of Android sdk. For example
+#### Configuracion de variables de Entorno
+
+##### Windows
+
+1. Click derecho en el icono "Este equipo" ( My computer )
+2. Seleccionar "Propiedades" desde el menu desplegable
+3. Clickear la opcion de "Configuracion avanzada del sistema"
+4. Click "Variables de Entorno"
+5. En la seccion de variables de sistema, crea o modifica la variable **"ANDROID_HOME"** y establece la ruta de Android sdk. Por ejemplo:
 ```
 Name  : ANDROID_HOME
 Value : C:\Users\USERID\AppData\Local\Android\Sdk
 ```
-6. In the section System Variables, create or edit **"JAVA_HOME"** variable and set path of Android sdk. For example
+6. En la seccion de variables de sistema, crea o modifica la variable **"JAVA_HOME"** y establece la ruta de Android sdk. Por ejemplo:
 ```
 Name  : JAVA_HOME
 Value : C:\Program Files\Java\jdk1.8.0_241
 ```
 
-7. In the section System Variables, create or edit **"path"** variable and set path of Android sdk platform-tools. For example
+7. En la seccion de variables de sistema, crea o modifica la variable **"path"** y establece la ruta de Android sdk platform-tools. Por ejemplo:
 ```
 Name  : path
 Value : C:\Users\USERID\AppData\Local\Android\Sdk\platform-tools
 ```
-8. In the section System Variables, create or edit **"path"** variable and set path of Android emulator. For example
+8. En la seccion de variables de sistema, crea o modifica la variable **"path"** y establece la ruta de Android emulator. Por ejemplo:
 ```
 Name  : path
 Value : C:\Users\USERID\AppData\Local\Android\Sdk\emulator
 ```  
-#### Creating new virtual device:
+#### Creacion de nuevos dispositivos virtuales ( Emuladores ):
 
-- Open **Android Studio** and go to: **Tools** -> **AVD Manager** -> **Create Virtual Device...**
-- Select **Nexus 6** - > **Next** -> **API Level 10** -> **Next** -> Then rename device as Nexus 6 -> **Finish**.
+- Abrir **Android Studio** ir a: **Tools** -> **AVD Manager** -> **Create Virtual Device...**
+- Seleccionar **Nexus 6** - > **Next** -> **API Level 10** -> **Next** -> Luego renombra el dispositivo como Nexus 6 -> **Finish**.
 
-**List of devices connected**
+**Lista de dispositivos conectados o disponibles**
 
-With this command we can see a list of emualtors available on our local machine.
+Con este comando podremos visualizar la lista de emuladores disponibles en nuestra maquina local.
 ```
 
 	$ emulator -list-avds
 
 ```
 
-**Open an emulator**
+**Abrir un emulador**
 
-We can open an emulator with the command **emulator** *@device_name* from the list of devices availables on local machine.
-For example:
+Podemos abrir un emulador con el comando **emulator** *@device_name* desde la lista de dispositivos disponibles en la maquina local.
+Por ejemplo::
 
 ```
 
@@ -133,35 +139,36 @@ For example:
 ```
 
 
-# First time run
+# Primera Ejecución
 
-As root or admin.
+Como root o administrador
 ### Run tests by tag @run
 
-To install dependencies:
+para instalar las dependencias del proyecto
 ```console
 $ npm install
 ```
 
-To execute web testing in Chrome
+para ejecutar las pruebas en chrome
 
 ```console
 $ npm run start-web
 ```
 
-With an emulator open to execute mobile testing on local machine.
+Con un emulador abierto para ejecutar las pruebas mobile en la maquina local.
 
 ```console
 $ npm run start-mobile
 ```
-Exclusive **BrowserStack**: With user and key of an account and  to execute mobile testing. Account's data must be in config file: config\wdio.mobile.bs.conf.ts.
+
+Exclusivo para integracion con **BrowserStack**: Con las llaves de usuario de tu cuenta de browserstak debes configurarlo en la ruta ubicada en: config\wdio.mobile.bs.conf.ts.
 
 ```console
 $ npm run start-mobile-bs
 ```
-Exclusive **SauceLabs**: With user and key of an account and  to execute mobile testing. Account's data must be in config files: config\wdio.mobile.sl.conf.ts or config\wdio.chrome.sl.conf.ts.
+Exclusivo para integracion con **SauceLabs**:Con las llaves de usuario de tu cuenta de Saucelab debes configurarlo en la ruta ubicada en: config\wdio.mobile.sl.conf.ts o config\wdio.chrome.sl.conf.ts.
 
-Mobile excecution in Android
+Ejecución mobile en Android
 
 ```console
 $ npm run start-mobile-sl
@@ -172,7 +179,7 @@ Web excecution
 $ npm run start-web-sl
 ```
 
-### Generate Allure-Reports after an execution
+### Como generar el reporte de la automatización en Allure-Report
 
 ```console
 $ npm run clean-report
@@ -183,20 +190,19 @@ To Open an Allure Report
 ```console
 $ npm run open-report
 ```
-# Folders structure
+# Estructura del Proyecto
 
   
 
 ## App
 
-
-In this folder we need to have the apk artifact.
+En esta carpeta necesitamos tener el apk. o .ipa (para ios)
 
 
 ## Config
 
 
-We have this files:
+Tenemos los siguientes archivos:
 - **wdio.chrome.conf.ts**:  with configurations to run tests on Chrome.
 - **wdio.mobile.conf.ts**:  with configurations to run tests on a local mobile Android Device.
 - **wdio.mobile.bs.conf.ts**: with configurations to run mobile tests on a BrowserStack mobile Android Device.
@@ -219,19 +225,19 @@ Configuration and parameters:
      -  Field: **manifest.package** of AndroidManifest.xml file of apk.
    - **appActivity:**: Name of the first view or activity that open when we open our app.
      - Field: **manifest.activity** (**android:name**) of AndroidManifest.xml file of apk.
-   - **platformVersion**: Associated to API version, Android version. **For example**: 10.
-   - **deviceName:** Identifier of the device. **For example**: Nexus 6 of default value: emulator-5554.
+   - **platformVersion**: Associated to API version, Android version. **Por ejemplo:**: 10.
+   - **deviceName:** Identifier of the device. **Por ejemplo:**: Nexus 6 of default value: emulator-5554.
    - **automationName:** We always use: **UiAutomator2** for Android.
 -  **capabilities: (BrowserStack)** set of options related to device, platform, device name.
-   - **appium:app**: **app_url** value that we get after uploading an app to BrowserStack, **For example**: *'bs://dbf4840f740e91f9d2e546479afd820ebc5a6e56'*.
-   - **appium:deviceName**: Identifier of the device. **For example**: Google Pixel 3.
-   - **appium:platformVersion**: Associated to API version, Android version. **For example**: 10.
+   - **appium:app**: **app_url** value that we get after uploading an app to BrowserStack, **Por ejemplo:**: *'bs://dbf4840f740e91f9d2e546479afd820ebc5a6e56'*.
+   - **appium:deviceName**: Identifier of the device. **Por ejemplo:**: Google Pixel 3.
+   - **appium:platformVersion**: Associated to API version, Android version. **Por ejemplo:**: 10.
    - **appium:automationName**: We always use: **UiAutomator2** for Android.
 -  **capabilities: (SauceLabs)** set of options related to device, platform, device name.
-   - **app**: **storage:filename=[APK_NAME]** name of apk, **For example**: *'storage:filename=Android-NativeDemoApp-0.4.0.apk'*.
-   - **appium:deviceName**: Identifier of the device. **For example**: *'Samsung_Galaxy_S9_free'*.
+   - **app**: **storage:filename=[APK_NAME]** name of apk, **Por ejemplo:**: *'storage:filename=Android-NativeDemoApp-0.4.0.apk'*.
+   - **appium:deviceName**: Identifier of the device. **Por ejemplo:**: *'Samsung_Galaxy_S9_free'*.
    - **platformName**: Platform where the application will be tested. **Android** for android.
-   - **appium:platformVersion**: Associated to API version, Android version. **For example**: *'10.0'* .
+   - **appium:platformVersion**: Associated to API version, Android version. **Por ejemplo:**: *'10.0'* .
    - **appium:automationName**: We always use: **UiAutomator2** for Android.
 - **services:**
   - For web we use **chromedriver**.
@@ -269,10 +275,10 @@ Configuration and parameters:
 ```
 
 - **onPrepare:** Actions to to before de begin of the excecution.
-- **afterCommand:** Actions to do after a command is executed, for example after a click we want to take a screenshot.
+- **afterCommand:** Actions to do after a command is executed, Por ejemplo: after a click we want to take a screenshot.
 - **onComplete:** Actions to do after all test had been executed.
-- **beforeScenario:** Actions to do before a scenario is executed. For example: we use **browser.reset();** to prepeare the initial conditions.
-- **afterScenario:** Actions to do after a scenario was executed. For example: **browser.closeApp()**; to close a mobile app. **browser.reloadSession()**; to reload a web browser.
+- **beforeScenario:** Actions to do before a scenario is executed. Por ejemplo:: we use **browser.reset();** to prepeare the initial conditions.
+- **afterScenario:** Actions to do after a scenario was executed. Por ejemplo:: **browser.closeApp()**; to close a mobile app. **browser.reloadSession()**; to reload a web browser.
 
 We can use differents hooks, please visit [WebDriver IO Hooks](https://webdriver.io/docs/options.html#hooks) for more details.
 
@@ -327,7 +333,7 @@ export default new LoginPage();
 
 On this folder we have to create the steps per functionality out set of scenarios defined on our .feature files.
 
-**For example**:
+**Por ejemplo:**:
   We have an **login.feature** file with this definition to execute with a set of 2 groups of data:
 
 ```Gherkin
@@ -349,7 +355,7 @@ Feature: The Internet Guinea Pig Website
 
 For each **Given**, **When**, **Then** step we have to create a step to do the behavior that happen on the application.
 
-**For example:**
+**Por ejemplo::**
 On our **loginSteps.ts** file, we will import our pages defined to create a test.
 
 ```Typescript
@@ -378,7 +384,7 @@ Then(/^I should see a flash message saying (.*)$/, async (message: string) => {
 
 ## commons
 
-On this folder we have a few utility classes for example: **constants.ts**, **utils.ts**.
+On this folder we have a few utility classes Por ejemplo:: **constants.ts**, **utils.ts**.
   
 ## pipelines
 
@@ -414,7 +420,7 @@ Generate *PO.ts files to have our Page Object Model class
 
 Open utils/generator/generator.ts file and set the list the elements that will be nessesary for our scripts.
 
-For example: Header Page
+Por ejemplo:: Header Page
 
 ```Typescript
 import { Util } from './util';
@@ -441,7 +447,7 @@ npm run generate-po
 
 It will generate viewPO.ts file for page layer. We only need to change class name and fill the path to locale the elements.
 
-For example:
+Por ejemplo::
 
 ```
 --------------------------------------------
@@ -495,7 +501,7 @@ To create an account please go to [the official website](https://www.browserstac
 
 When you are logged in, go to profile and click on *"Go to Dashboard"* to get username and access key.
 
-This credentials have to be in config file, for example in: config\wdio.mobile.bs.conf.ts y fields: user and key entry respectively, we need to define the enviroment variables.
+This credentials have to be in config file, Por ejemplo: in: config\wdio.mobile.bs.conf.ts y fields: user and key entry respectively, we need to define the enviroment variables.
 
 We need to create a local .env file with something like that:
 
@@ -556,7 +562,7 @@ To create an account please go to [the official website](https://saucelabs.com/)
 
 When you are logged in, go to "ACCOUNT" > "user settings". You can get USER NAME and ACCESS KEY.
 
-This credentials have to be in config file, for example in: config\wdio.mobile.ls.conf.ts y fields: user and key entry respectively. 
+This credentials have to be in config file, Por ejemplo: in: config\wdio.mobile.ls.conf.ts y fields: user and key entry respectively. 
 
 ## Upload App
 
