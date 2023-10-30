@@ -6,7 +6,7 @@ color: primary
 description: Aca encontraras toda la informacion necesaria para customizar un reporte en Allure y aplicar los colores y el branding de tu empresa.
 ---
 
-{% include elements/video.html id="o-Je28o4rl8" %}
+{% include elements/video.html id="4EuTI3qp_gk" %}
 -------------------------
 
 # Personalización de Informes Allure en Windows con el Plugin Custom Logo
